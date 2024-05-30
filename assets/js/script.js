@@ -61,7 +61,7 @@ const crearCards = (results=[])=>{
 
         const card = document.createElement("div");
         card.classList.add("card");
-        const img= document.createElement("avatar");
+        const img= document.createElement("img");
         img.src=image;
         img.alt=`imagen de ${name}`;
         img.classList.add("card-img-top");
