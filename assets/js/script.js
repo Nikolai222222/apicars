@@ -97,21 +97,22 @@ const crearCards = (results=[])=>{
         btnver.classList.add("btn","btn-warning");
         btnver.textContent = "ver mas";
         btnver.addEventListener("click",()=>{
+            console.log("ok");
             enviarDatos(id, name, image, model, year, price, mileage, gearbox);
         });
 
         divCol.appendChild(card);
 
-        card.append(img);
-        card.append(divBody);
+        card.appendChild(img);
+        card.appendChild(divBody);
 
-        divBody.append(title);
-        divBody.append(subtitle);
-        divBody.append(subtitle2);
-        divBody.append(subtitle3);
-        divBody.append(subtitle4);
-        divBody.append(subtitle5);
-        divBody.append(btnver);
+        divBody.appendChild(title);
+        divBody.appendChild(subtitle);
+        divBody.appendChild(subtitle2);
+        divBody.appendChild(subtitle3);
+        divBody.appendChild(subtitle4);
+        divBody.appendChild(subtitle5);
+        divBody.appendChild(btnver);
         
         autosRow.appendChild(divCol)
 

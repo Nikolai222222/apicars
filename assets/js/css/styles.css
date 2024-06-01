@@ -2,23 +2,17 @@ body{
     background-color: black;
 }
 nav {
-
     background-color: #000000;
-  
     padding: 10px;
-  
-
-  
   }
   
-  
-  
   nav a {
-  
     color: #ffffff;
-  
     text-decoration: none;
-  
     margin: 10px;
-  
+  }
+
+  .loginbtn{
+    position: absolute;right: 2%;
+    position: absolute;top: 0%;
   }
