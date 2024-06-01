@@ -1,0 +1,76 @@
+$(document).ready(function(){
+    let username = '';
+    let password = '';
+    let soloNumeros =/^[0-9]+$/;
+
+    let email = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    $('#btnenviar').click(function(e){
+        e.preventDefault();
+
+        $("#error1").text("");
+
+        username = $("#username").val();
+
+        if($('#username').val() === ""){
+            $("#error1").text("Debe ingresar su usuario");
+            $("#error1").css("color","red");
+            return;
+        }
+
+        if(!email.test(username)){
+            $("#error1").text("Debe ser un email valido");
+            $("#error1").css("color","red");
+            return;
+        }
+       
+        //password
+        
+        password=$('#password').val();
+        
+        $("#error2").text("");
+
+        password = $("#password").val();
+
+        if($('#password').val() === ""){
+            $("#error2").text("Debe una contraseña valida");
+            $("#error2").css("color","red");
+            return;
+        }
+        if($('#password').val().length <7  ){
+            $("#error2").text("La password debe ser mayor o igual a 7");
+            $("#error2").css("color","red");
+            return;
+        }
+
+        
+        console.log("paso");
+        
+      
+
+        let formData={
+            username,
+            password
+        };
+
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(response){
+                console.log('respuesta del servidor', response);
+
+                localStorage.setItem("isAuthenticated", "true");
+                window.location.href = "index.html"
+            },
+            error: function(xhr, status, error){
+                console.error('error al enviar la solicitud', error);
+            }
+        });
+
+
+    });
+
+});
