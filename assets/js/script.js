@@ -61,9 +61,9 @@ const crearCards = (results=[])=>{
 
         const card = document.createElement("div");
         card.classList.add("card");
-        const img= document.createElement("img");
-        img.src=image;
-        img.alt=`imagen de ${name}`;
+        const img = document.createElement("img");
+        img.src = image;
+        img.alt = `imagen de ${name}`;
         img.classList.add("card-img-top");
 
         const divBody = document.createElement("div");
@@ -71,7 +71,7 @@ const crearCards = (results=[])=>{
 
         const title = document.createElement("h5");
         title.classList.add("text-title");
-        title.textContent =`Nombre: ${name}`;
+        title.textContent =`Name: ${name}`;
 
         const subtitle = document.createElement("p");
         subtitle.classList.add("text-title");
@@ -97,8 +97,8 @@ const crearCards = (results=[])=>{
         btnver.classList.add("btn","btn-warning");
         btnver.textContent = "ver mas";
         btnver.addEventListener("click",()=>{
-            console.log("ok");
             enviarDatos(id, name, image, model, year, price, mileage, gearbox);
+        console.log("a");
         });
 
         divCol.appendChild(card);

@@ -16,3 +16,6 @@ nav {
     position: absolute;right: 2%;
     position: absolute;top: 0%;
   }
+  .container{
+    margin-top: 20px;
+  }

@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    max-width:1000%;
+    
+}
+
+nav {
+    background-color: #2b2b2b;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px;
+  }
