@@ -8,23 +8,39 @@
     <title>Document</title>
 </head>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<!-- navbar -->
-<div class= "col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="container-fluid">
+          <img class="foto-nav" src="./assets/js/img/gg.png" alt="Bootstrap" width="160" height="60">
 
-    <nav>
-     <a class="botones" href="./index.html">Inicio</a>
-     <a class="botones" href="#">Autos Vendidos</a>
-     <a class="botones" href="#">Contacto</a>
-     <a class="loginbtn" href="./login.html">Iniciar Sesion</a>
-   </nav>
-   </div>
+          <a class="navbar-brand" href="./index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto"><i class="fa-solid fa-phone"></i> Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html"><i class="fa-regular fa-user"></i> Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="carritoBtn" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                            <i class="fa-solid fa-cart-shopping"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
-<!-- navbar -->
 
 
-
-<!-- carrousel -->
 <div class= "col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -63,9 +79,6 @@
     </button>
   </div>
   </div>
-<!-- carrousel -->
-
-
 <body>
 
 
@@ -75,13 +88,51 @@
         <div class="row" id="autosRow"></div>
     </div>
   </div>
+
+
+
+<div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="carrito" class="row"></div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>
+
     
-
-
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="successModalLabel">Vehículo agregado exitosamente</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Vehículo agregado al carrito: <span id="car-name"></span>
+          </div>
+      </div>
+  </div>
+</div>
 
  
+
+<div id="contacto" class="container mt-4 mb-4">
+  <p>Derechos reservados &copy; Autos del Mar - Automotora</p>
+  <p>Dirección: Calle Principal #123, Ciudad</p>
+  <p>Teléfono: 123-456-7890</p>
+</div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script type="module" src="./assets/js/script.js"></script>    
+<script type="module" src="./carrito.js"></script>
 </body>
 </html>
