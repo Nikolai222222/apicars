@@ -1,8 +1,14 @@
 const carrito = [];
 
+const updateCartCount = () =>{
+    const cartCount = document.getElementById("cart-count");
+    cartCount.textContent = carrito.length;
+}
+
 export const addToCart = (id, name, model, price) => {
     carrito.push({ id, name, model, price });
     displayCart();
+    updateCartCount();
 };
 
 export const removeFromCart = (id) => {
@@ -11,6 +17,7 @@ export const removeFromCart = (id) => {
         carrito.splice(index, 1);
     }
     displayCart();
+    updateCartCount();
 };
 
 export const displayCart = () => {

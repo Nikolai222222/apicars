@@ -13,14 +13,15 @@ $(document).ready(function(){
         username = $("#username").val();
 
         if($('#username').val() === ""){
-            $("#error1").text("Debe ingresar su usuario");
+            $("#error1").text("It must be a valid user");
             $("#error1").css("color","red");
             return;
         }
 
         if(!email.test(username)){
-            $("#error1").text("Debe ser un email valido");
+            $("#error1").text("It must be a valid email");
             $("#error1").css("color","red");
+            
             return;
         }
        
@@ -33,12 +34,12 @@ $(document).ready(function(){
         password = $("#password").val();
 
         if($('#password').val() === ""){
-            $("#error2").text("Debe una contraseña valida");
+            $("#error2").text("It must be a valid password");
             $("#error2").css("color","red");
             return;
         }
         if($('#password').val().length <7  ){
-            $("#error2").text("La password debe ser mayor o igual a 7");
+            $("#error2").text("The password must be greater than or equal to 7");
             $("#error2").css("color","red");
             return;
         }
